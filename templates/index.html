@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Livadă</title>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Titlul -->
+        <div class="menu">
+            <h1 class="title">
+                <a style="text-decoration:none; color:black" href="./">La Livadă</a>
+            </h1>
+        <!-- Meniul -->
+            <div class="nav-bar">
+                <a style="text-decoration: none;" href="./">
+                    <div class="nav">Home</div>
+                </a>   
+                <a style="text-decoration: none;" href="./menu">
+                    <div class="nav">Menu</div>
+                </a>   
+                <a style="text-decoration: none;" href="./about">
+                    <div class="nav">About</div>
+                </a>   
+            </div>
+        </div>
+
+        <!-- Fotografiile -->
+
+        <div class="photos">
+            <div class="photo-1">
+                <p> 
+                    Come over
+                </p>   
+            </div>
+            <div class="photo-2">
+                <p>
+                    During the day
+                </p>   
+            </div>
+            <div class="photo-3">
+                <p> 
+                    Or night
+                </p>   
+            </div>
+            <div class="photo-4">
+                <p> 
+                    Or whenever you want to
+                </p>   
+            </div>
+        </div>
+
+        <!-- Footer -->
+
+        <footer>
+        <form method="POST" action="feedback">
+            <div class="feedback">
+                
+                <div class="rate">
+                    <img class="rate-icon" src="../static/images/icon-star.svg" width="20px" height="20px" alt="n-a mers">
+                    <h1 class="rate-title">How did we do?</h1>
+                    <p> Please comment on how we did</p>
+                    
+                    {% csrf_token %}
+                    
+                    <textarea name="feedback" id="feedback" rows="5" cols="20" ></textarea>
+                    <button type="submit">Send</button>
+                    
+                    
+                </div>
+                
+                <div class="scroll">
+                    {% for feedback in feedback %}
+                    <div class="scroll-text">{{feedback.text}}</div>
+                    {% endfor %}
+                </div>
+            </div>
+        </form>
+        </footer>
+    </div>
+</body>
+</html>

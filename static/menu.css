@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gulzar&display=swap');
+
+body{
+    background-color: #eae7dc;
+    margin: 0;
+}
+
+@media screen and (min-width:800px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: minmax(100vh, auto);
+        grid-template-areas: 
+        'Menu contents'
+    }
+    .title{
+        font-size: 3rem;
+        text-align: center;
+    }
+    .nav{
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width:799px){
+    .container{
+        display: grid;
+        grid-template-rows: 10vh 90vh auto;
+        grid-template-areas: 
+        'Menu'
+        'contents'
+        'footer';
+    }
+    .menu{
+        position: relative;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items:center;
+    }
+    .nav-bar{
+        position: relative;
+        margin: 0px 15px;
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+    }
+    /* .nav-bar{
+        text-align: right;
+    } */
+    .title{
+        margin: 0px 15px;
+        font-size: 2rem;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+    .nav{
+        font-size: 1.25em;
+        padding: 0 5px;
+    }
+}
+.menu{
+    grid-area: Menu;
+    background-color: #e98074;
+}
+.title{
+
+    font-family: 'Lobster', cursive;
+}
+.nav-bar{
+    line-height: 4em;
+    text-align: center;
+}
+.nav{
+ 
+    color:antiquewhite;
+    text-align: center;
+    transition: background-color 0.5s;
+}
+.nav:hover{
+    background-color: #6c3b35;
+}
+.contents{
+    margin: 20px;
+    grid-area: contents;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat( auto-fit, minmax( 250px, 1fr));
+    grid-auto-rows: 400px;
+}
+.fel{
+    border-radius: 10px;
+    background-color: #2A2D34;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    grid-template-areas:
+    'image'
+    'text';
+}
+
+.image{
+    grid-area: image;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-position: center;
+    background-size: cover;
+}
+.text{
+    
+    grid-area: text;
+    color: #E6E6E9;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*https://images.unsplash.com/photo-1601894087104-0c18bc34dbd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1965&q=80 - burger
+https://images.unsplash.com/photo-1530805948738-95aa20739233?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80 - cartofi
+https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80 - salata
+https://images.unsplash.com/photo-1611270629569-8b357cb88da9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80 - paste
+https://media.istockphoto.com/photos/ro/m%C3%A2ncare-tradi%C8%9Bional%C4%83-balcanic%C4%83-%C8%99i-s%C3%A2rb%C4%83-sarma-fotografie-stoc-de-varz%C4%83-umplut%C4%83-s%C3%A2rb%C4%83-id1342962494?k=20&m=1342962494&s=612x612&w=0&h=Zv1G1Ayt7xnPuAPOgH8JGSFru4R7CO8UbVINN_DwnP0= - sarmale
+https://media.istockphoto.com/photos/ro/sup%C4%83-de-legume-id1092632852?k=20&m=1092632852&s=612x612&w=0&h=ewsOVIVzqVKQcapu14UluNDwoIyf3Yq_R6U2Q8Xt2CY= - ciorbă
+https://media.istockphoto.com/photos/ro/pe%C8%99te-gustos-la-gr%C4%83tar-id980462262?k=20&m=980462262&s=612x612&w=0&h=a1dPCc-BFhVmi6IKSp-OjqTa8jIfwg3iHQBnHrpcQrc= - pește
+https://media.istockphoto.com/photos/ro/crocante-pr%C4%83jite-cu-p%C3%A2ine-f%C3%A2%C8%99ii-de-pui-pe-farfurie-id1213222041?k=20&m=1213222041&s=612x612&w=0&h=0IEy8JmDYG_oKdlhUedfStmmn8eKMLsCUXcZNggeqr0= -pui crispy
+
+*/ 

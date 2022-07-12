@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/menu.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <h1 class="title">
+                <a style="text-decoration:none; color:black" href="./">La Livadă</a>
+            </h1>
+        <!-- Meniul -->
+            <div class="nav-bar">
+                <a style="text-decoration: none;" href="./">
+                    <div class="nav">Home</div>
+                </a>   
+                <a style="text-decoration: none;" href="./menu">
+                    <div class="nav">Menu</div>
+                </a>   
+                <a style="text-decoration: none;" href="./about">
+                    <div class="nav">About</div>
+                </a>   
+            </div>
+        </div>
+
+        <div class="contents">
+            {% for mancare in mancare %}
+            <div class="fel">
+                <div class="image" style="background-image: url('{{mancare.link_poza}}');"></div>
+                <div class="text">{{mancare.nume}}</div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <footer></footer>
+    </div>
+</body>
+</html>
